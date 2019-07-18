@@ -901,6 +901,7 @@ public class main extends AppCompatActivity {
                 return true;
             }
             Log.d("jisung5", urlt);
+            //a
             return false;
         }
 

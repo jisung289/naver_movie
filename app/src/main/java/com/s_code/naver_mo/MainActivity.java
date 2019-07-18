@@ -37,6 +37,7 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class MainActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler,RewardedVideoAdListener {
 
+
     private ImageView go_naver;
     private ImageView point_cha;
     private ImageView point_free;
