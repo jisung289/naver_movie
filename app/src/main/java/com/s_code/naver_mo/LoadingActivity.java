@@ -10,6 +10,7 @@ import android.view.Window;
 /**
  * Created by Administrator on 2016-06-10.
  */
+
 public class LoadingActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
