@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.DownloadManager;
 import android.app.NotificationManager;
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -753,7 +754,19 @@ public class main extends AppCompatActivity {
                 return true;
             } else if (url.startsWith("intent://")) {    //2015-01-21 카카오톡 옐로아이디 1:1 채팅 관련하여 추가 작업
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                startActivity(intent);
+
+
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    Intent webIntent = new Intent(Intent.ACTION_VIEW);
+                    webIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName()));
+                    if (webIntent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(webIntent);
+                    }
+                }
+
+
                 return true;
             }
             else {
@@ -811,7 +824,15 @@ public class main extends AppCompatActivity {
                 }   //
                 else if (urlt.startsWith("intent://")) {    //2015-01-21 카카오톡 옐로아이디 1:1 채팅 관련하여 추가 작업
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlt));
-                    startActivity(intent);
+                    try {
+                        startActivity(intent);
+                    } catch (ActivityNotFoundException e) {
+                        Intent webIntent = new Intent(Intent.ACTION_VIEW);
+                        webIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName()));
+                        if (webIntent.resolveActivity(getPackageManager()) != null) {
+                            startActivity(webIntent);
+                        }
+                    }
                 }   //
                 else {
                     view.loadUrl(urlt);
@@ -868,7 +889,15 @@ public class main extends AppCompatActivity {
                 return true;
             }else if (urlt.startsWith("intent://")) {    //2015-01-21 카카오톡 옐로아이디 1:1 채팅 관련하여 추가 작업
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlt));
-                startActivity(intent);
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    Intent webIntent = new Intent(Intent.ACTION_VIEW);
+                    webIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName()));
+                    if (webIntent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(webIntent);
+                    }
+                }
                 return true;
             }
             Log.d("jisung5", urlt);
