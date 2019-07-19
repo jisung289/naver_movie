@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A3A3A3"
+    android:background="#D4DAF8"
     android:orientation="vertical">
 
     <ImageView
@@ -78,6 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="3,000원 충전 > 30,000포인트 \n광고1회 시청 > 100포인트\n1회다운 30 포인트 소진"
+        android:textColor="#FD000000"
         android:textSize="18sp" />
 
     <LinearLayout
@@ -91,6 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="현재 포인트 :"
+            android:textColor="#FD000000"
             android:textSize="24sp" />
 
         <TextView
@@ -100,6 +102,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="-"
+            android:textColor="#FD000000"
             android:textSize="24sp" />
     </LinearLayout>
 

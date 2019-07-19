@@ -207,8 +207,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onRewardedVideoAdFailedToLoad(int errorCode) {
-     //   Log.d("ads_test", "err:"+errorCode);
-      //  Toast.makeText(this, "onRewardedVideoAdFailedToLoad", Toast.LENGTH_SHORT).show();
+       Log.d("ads_test", "err:"+errorCode);
+      Toast.makeText(this, "포인트 광고를 불러올수 없습니다. 잠시후 다시 시도해주세요.", Toast.LENGTH_SHORT).show();
     }
 
 
